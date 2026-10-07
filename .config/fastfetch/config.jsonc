@@ -1,0 +1,59 @@
+{
+  "$schema": "https://raw.githubusercontent.com/fastfetch-cli/fastfetch/2.66.0/doc/json_schema.json",
+  "logo": {
+    "type": "builtin",
+    "source": "Linux"
+  },
+  "display": {
+    "color": {
+      "keys": "red",
+      "title": "default",
+      "output": "default",
+      "separator": "blue"
+    },
+    "separator": " >> "
+  },
+  "modules": [
+    {
+      "type": "title",
+      "key": "User",
+      "format": "{user-name}"
+    },
+    {
+      "type": "title",
+      "key": "Hostname",
+      "format": "{host-name}"
+    },
+    {
+      "type": "os",
+      "format": "{pretty-name} {version-id} {arch}"
+    },
+    "kernel",
+    "shell",
+    "packages",
+    {
+      "type": "cpu",
+      "key": "Temperature",
+      "temp": true,
+      "format": "{temperature}"
+    },
+    {
+      "type": "cpu",
+      "key": "CPU",
+      "format": "{cores-logical} x {name}"
+    },
+    {
+      "type": "gpu",
+      "format": "{name}"
+    },
+    {
+      "type": "memory",
+      "key": "RAM"
+    },
+    {
+      "type": "disk",
+      "key": "Disk",
+      "folders": "/"
+    }
+  ]
+}
